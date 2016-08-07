@@ -1,0 +1,18 @@
+{
+  "name": "CDS",
+  "version": "0.0.0",
+  "description": "CDS",
+  "main": "app.js",
+  "author": {
+    "name": "dipak.patil",
+    "email": ""
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "3.4.4",
+    "fs": "*",
+    "ng-table": "^1.0.0",
+    "stylus": "*"
+  }
+}

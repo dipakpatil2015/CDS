@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <link href="libs/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet" />
+    <link href="libs/css/font-awesome.css" rel="stylesheet" />
+    <script src="libs/angular/1.2.20/angular.min.js"></script>
+    <script src="libs/angular/1.2.20/angular-route.min.js"></script>
+    <script src="angularApp.js"></script>
+    <script src="controller.js"></script>
+    <link href="node_modules/ng-table/dist/ng-table.min.css" rel="stylesheet" />
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/esvit/ng-table/1.0.0/dist/ng-table.min.css">-->
+<!--<script src="https://cdn.rawgit.com/esvit/ng-table/1.0.0/dist/ng-table.js"></script>-->
+    <script src="node_modules/ng-table/dist/ng-table.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+            table tr:nth-child(odd) {
+                background-color: #f1f1f1;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+            div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+icon-sort
+{
+
+}
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+    </style>
+
+
+</head>
+
+<body ng-controller="mainController">
+    <header>
+        <div>
+          <h1><a href="/">CDS Request Logging Application</a></h1>  
+        </div>
+    </header>
+    <nav>
+   
+            
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#">Home</a></li>
+                <li><a href="#requestview">New Request</a></li>
+				<li><a href="#requestlist">Request List</a></li>
+            </ul>
+     
+    </nav>
+    
+    
+    <div id="main">
+        <div ng-view></div>
+    </div>
+
+    <div>
+        <footer>Copyright ©XYZ</footer>
+    </div>
+</body>
+</html>

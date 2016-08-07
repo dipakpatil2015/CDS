@@ -1,0 +1,68 @@
+<div class="jumbotron text-center" ng-controllerer="requestviewController">
+<p>{{message}}</p>
+<form class="form-horizontal" role="form" ng-submit="SendData()">
+<fieldset>
+
+<!-- Form Name -->
+<legend>CDS Data Request Form</legend>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="requesterName">Requester Name/Email :</label>  
+  <div class="col-md-4">
+  <input id="requesterName" ng-model="requesterName" name="txtrequesterName" type="text" placeholder="Requester Name /Email" class="form-control input-md" required=""></input>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="approversName">Approvers Name/E-mail</label>  
+  <div class="col-md-4">
+  <input id="approversName" ng-model="approversName" name="approversName" type="text" placeholder="Approvers Name /E-mail" class="form-control input-md" required=""> </input>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="requestersTeamName">Requester Team Name/E-mail</label>  
+  <div class="col-md-4">
+  <input id="requestersTeamName" ng-model="requestersTeamName" name="requestersTeamName" type="text" placeholder="Requester Team Name/E-mail" class="form-control input-md" required=""></input>
+    
+  </div>
+</div>
+
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="domain">Domain</label>
+  <div class="col-md-4">
+    <select id="domain" ng-model="domain" name="domain" class="form-control">
+      <option value="SDS data">SDS data</option>
+      <option value="Employee Data">Employee Data</option>
+      <option value="PhoneBook Data">PhoneBook Data</option>
+    </select>
+  </div>
+</div>
+
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="requestDescription">Request Description</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="requestDescription" ng-model="requestDescription"  name="requestDescription">Request Description</textarea>
+  </div>
+</div>
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" value="Submit" class="btn btn-success">Submit</button>
+    <button id="Cancel" name="Cancel" class="btn btn-danger">Cancel</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+    </div>

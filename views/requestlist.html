@@ -1,0 +1,34 @@
+<div class="jumbotron text-center">
+<div class="table-responsive">
+
+   <!--<input  class="col-md-8"type="text" ng-model="search" class="form-control" placeholder="Search">-->
+  
+  <table ng-table="requestsTable" class="table table-striped" show-filter="true">
+    <tr ng-repeat="x in data">
+        <td data-title="'RequesterName'" sortable="'requesterName'" filter="{ 'requesterName': 'text' }">
+           {{x.requesterName}}
+       </td>
+	   <td data-title="'ApproverName'" sortable="'approversName'" filter="{ 'approversName': 'text' }">
+           {{x.approversName}}
+       </td>
+	   <td data-title="'Domain'" sortable="'domain'" filter="{ 'domain': 'text' }">
+           {{x.domain}}
+       </td>
+	    <td data-title="'Team Name'" sortable="'requestersTeamName'" filter="{ 'requestersTeamName': 'text' }">
+           {{x.requestersTeamName}}
+       </td>
+	    <td data-title="'Justification'" sortable="'requestDescription'" filter="{ 'requestDescription': 'text' }">
+           {{x.requestDescription}}
+       </td>
+	    <td data-title="'Status'" sortable="'requestStatus'" filter="{ 'requestStatus': 'text' }">
+           {{x.requestStatus}}
+       </td>
+	   <td data-title="'Action'">
+	    <button class="btn btn-success" title="Approve Request" ng-click="approveRequest(x.id)"  ng-disabled="x.requestStatus!='Pending'"></button>
+		<button class="btn btn-danger" title="Reject Request" ng-click="rejectRequest(x.id)"  ng-disabled="x.requestStatus!='Pending'"></button>
+       </td>
+        
+    </tr>
+</table>
+</div>
+</div>
